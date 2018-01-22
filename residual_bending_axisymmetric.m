@@ -1,6 +1,6 @@
 ####################################################################################################
 ## Function to calculate finite differenced residuals of the displacement                         ##
-## formulation Foeppl von Karman equations (WITH BENDING TERMS) for solved for a circular domain, ##
+## formulation Foppl von Karman equations (WITH BENDING TERMS) for solved for a circular domain,  ##
 ## subject to a radial tension mu with Poisson ratio nu and thickness parameter xi = h/R          ##
 ####################################################################################################
 
