@@ -1,3 +1,3 @@
-# Modelling-Wrinkling-in-Elastic-Sheets
+# Modelling-Deformation-in-Elastic-Sheets
 
-Code which uses the fsolve function in Octave to model the deformation of elastic sheets.
+Code which uses the fsolve function in GNU Octave to model the deformation of elastic sheets.
