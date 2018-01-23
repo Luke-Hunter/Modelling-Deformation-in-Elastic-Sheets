@@ -1,0 +1,1191 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     37461,       1183]
+NotebookOptionsPosition[     34679,       1099]
+NotebookOutlinePosition[     35026,       1114]
+CellTagsIndexPosition[     34983,       1111]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Axisymmetric Bending\n",
+ StyleBox["Normal Derivation", "Section"]
+}], "Title",
+ CellChangeTimes->{{3.7207707547271237`*^9, 3.720770822839142*^9}, {
+  3.720770871479046*^9, 3.7207709153564763`*^9}, {3.7207709735867786`*^9, 
+  3.720770980559744*^9}}],
+
+Cell["\<\
+Now we consider the case of a unit normal to an  axisymmetric surface. 
+
+The two generic tangent vectors are as follows:\
+\>", "Text",
+ CellChangeTimes->{{3.720770986494046*^9, 3.7207710345547905`*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    StyleBox["g",
+     FontWeight->"Bold"], "r"], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SubscriptBox["u", 
+        RowBox[{"r", ",", "r"}]]}], ")"}], 
+     SubscriptBox[
+      StyleBox["e",
+       FontWeight->"Bold"], "r"]}], "+", 
+    RowBox[{
+     SubscriptBox["u", 
+      RowBox[{"\[Theta]", ",", "r"}]], 
+     SubscriptBox[
+      StyleBox["e",
+       FontWeight->"Bold"], "\[Theta]"]}], "+", 
+    RowBox[{
+     SubscriptBox["w", 
+      RowBox[{",", "r"}]], 
+     SubscriptBox[
+      StyleBox["e",
+       FontWeight->"Bold"], "z"]}]}]}], "   ", ",", " ", 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   SubscriptBox[
+    StyleBox["g",
+     FontWeight->"Bold"], "\[Theta]"], "=", 
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "r"], 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["u", 
+        RowBox[{"r", ",", "\[Theta]"}]], "-", 
+       SubscriptBox["u", "\[Theta]"]}], ")"}], 
+     SubscriptBox[
+      StyleBox["e",
+       FontWeight->"Bold"], "r"]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{
+        FractionBox["1", "r"], 
+        SubscriptBox["u", "r"]}], "+", " ", 
+       RowBox[{
+        FractionBox["1", "r"], 
+        SubscriptBox["u", 
+         RowBox[{"\[Theta]", ",", "\[Theta]"}]]}]}], ")"}], 
+     SubscriptBox[
+      StyleBox["e",
+       FontWeight->"Bold"], "\[Theta]"]}], "+", 
+    RowBox[{
+     FractionBox["1", "r"], 
+     SubscriptBox["w", 
+      RowBox[{",", "\[Theta]"}]], 
+     RowBox[{
+      SubscriptBox[
+       StyleBox["e",
+        FontWeight->"Bold"], "z"], "   ", "."}]}]}]}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.72032910647677*^9, 3.7203292736982594`*^9}, {
+  3.7203293130854387`*^9, 3.7203293273166122`*^9}, {3.7203293590210447`*^9, 
+  3.720329398399016*^9}, {3.720329555783387*^9, 3.720329631737349*^9}, {
+  3.720329698474372*^9, 3.720329719985882*^9}}]], "Text",
+ CellChangeTimes->{{3.7207709665556912`*^9, 3.7207709706683826`*^9}, 
+   3.7207710572332697`*^9, {3.720795118619488*^9, 3.720795176129796*^9}}],
+
+Cell["Specialising to the axisymmetric case we get:", "Text",
+ CellChangeTimes->{{3.7203289754051533`*^9, 3.72032904298101*^9}, {
+  3.720329074632736*^9, 3.7203290973035088`*^9}, {3.720329726770927*^9, 
+  3.7203297459870853`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox[
+    StyleBox["g",
+     FontWeight->"Bold"], "r"], "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SubscriptBox["u", 
+        RowBox[{"r", ",", "r"}]]}], ")"}], 
+     SubscriptBox[
+      StyleBox["e",
+       FontWeight->"Bold"], "r"]}], "+", 
+    RowBox[{
+     SubscriptBox["w", 
+      RowBox[{",", "r"}]], 
+     SubscriptBox[
+      StyleBox["e",
+       FontWeight->"Bold"], "z"]}]}]}], "   ", ",", "\[IndentingNewLine]", 
+  RowBox[{
+   SubscriptBox[
+    StyleBox["g",
+     FontWeight->"Bold"], "\[Theta]"], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{
+       SubscriptBox["u", "r"], "/", "r"}]}], ")"}], 
+    RowBox[{
+     SubscriptBox[
+      StyleBox["e",
+       FontWeight->"Bold"], "\[Theta]"], "    ", 
+     "."}]}]}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.72032910647677*^9, 3.720329241440157*^9}, {
+   3.720329275247034*^9, 3.720329277267277*^9}, {3.720329315500722*^9, 
+   3.7203293156207113`*^9}, {3.7203297486630497`*^9, 
+   3.7203297541166267`*^9}, {3.720329795182281*^9, 3.720329796044648*^9}, 
+   3.7203303342698803`*^9, 3.720771118340993*^9}],
+
+Cell[TextData[{
+ "Since ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["u", "\[Theta]"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " falls out, ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["u", "r"], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "is henceforth referred to as u for simplicity"
+}], "Text",
+ CellChangeTimes->{{3.720795191522682*^9, 3.720795253939275*^9}}],
+
+Cell["The axisymmetric metric tensor will be:", "Text",
+ CellChangeTimes->{{3.7203289754051533`*^9, 3.72032904298101*^9}, {
+  3.720329074632736*^9, 3.7203290973035088`*^9}, {3.720329800875875*^9, 
+  3.720329830620719*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"[", 
+   SubscriptBox["g", "\[Alpha]\[Beta]"], "]"}], "=", 
+  RowBox[{"(", GridBox[{
+     {
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          SubscriptBox["u", 
+           RowBox[{",", "r"}]]}], ")"}], "2"], "+", 
+       SuperscriptBox[
+        SubscriptBox["w", 
+         RowBox[{",", "r"}]], "2"]}], "0"},
+     {"0", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"u", "/", "r"}]}], ")"}], "2"]}
+    }], ")"}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.72032910647677*^9, 3.720329241440157*^9}, {
+  3.720329275247034*^9, 3.720329277267277*^9}, {3.720329315500722*^9, 
+  3.7203293156207113`*^9}, {3.7203297486630497`*^9, 3.7203297541166267`*^9}, {
+  3.720329795182281*^9, 3.720329796044648*^9}, {3.720329946015087*^9, 
+  3.7203300499987164`*^9}, {3.7207711150620756`*^9, 3.720771116003194*^9}, {
+  3.7207952620677404`*^9, 3.7207952682850986`*^9}}],
+
+Cell["The normal is defined as", "Text",
+ CellChangeTimes->{{3.7207712219033527`*^9, 3.720771238680028*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["n",
+   FontWeight->"Bold"], 
+  StyleBox["=",
+   FontWeight->"Bold"], 
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{"2", 
+     SqrtBox["g"]}]], 
+   SuperscriptBox["\[Epsilon]", "\[Alpha]\[Beta]"], 
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox["g", "\[Alpha]"], "\[Cross]", 
+     SubscriptBox[
+      StyleBox["g",
+       FontWeight->"Bold"], "\[Beta]"]}], ")"}]}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.72032910647677*^9, 3.720329241440157*^9}, {
+  3.720329275247034*^9, 3.720329277267277*^9}, {3.720329315500722*^9, 
+  3.7203293156207113`*^9}, {3.7203297486630497`*^9, 3.7203297541166267`*^9}, {
+  3.720329795182281*^9, 3.720329796044648*^9}, {3.720329946015087*^9, 
+  3.7203300499987164`*^9}, {3.7203302756297417`*^9, 3.720330367962619*^9}, {
+  3.720771096261094*^9, 3.720771108277672*^9}, {3.720771244367815*^9, 
+  3.7207713269077053`*^9}}],
+
+Cell["So the unit normal to the deformed surface will be:", "Text",
+ CellChangeTimes->{{3.7203289754051533`*^9, 3.72032904298101*^9}, {
+  3.720329074632736*^9, 3.7203290973035088`*^9}, {3.720329800875875*^9, 
+  3.720329830620719*^9}, {3.7203301960323353`*^9, 3.720330214887784*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["n",
+   FontWeight->"Bold"], 
+  StyleBox["=",
+   FontWeight->"Bold"], 
+  RowBox[{
+   FractionBox["1", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       RowBox[{"u", "/", "r"}]}], ")"}], 
+     SqrtBox[
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          SubscriptBox["u", 
+           RowBox[{",", "r"}]]}], ")"}], "2"], "+", 
+       SuperscriptBox[
+        SubscriptBox["w", 
+         RowBox[{",", "r"}]], "2"]}]]}]], 
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox[
+      StyleBox["g",
+       FontWeight->"Bold"], "r"], "\[Cross]", 
+     SubscriptBox[
+      StyleBox["g",
+       FontWeight->"Bold"], "\[Theta]"]}], ")"}]}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.72032910647677*^9, 3.720329241440157*^9}, {
+  3.720329275247034*^9, 3.720329277267277*^9}, {3.720329315500722*^9, 
+  3.7203293156207113`*^9}, {3.7203297486630497`*^9, 3.7203297541166267`*^9}, {
+  3.720329795182281*^9, 3.720329796044648*^9}, {3.720329946015087*^9, 
+  3.7203300499987164`*^9}, {3.7203302756297417`*^9, 3.720330367962619*^9}, {
+  3.720771096261094*^9, 3.720771108277672*^9}, {3.720795283312961*^9, 
+  3.7207952872091866`*^9}}],
+
+Cell["Simplifying we get:", "Text",
+ CellChangeTimes->{{3.7203289754051533`*^9, 3.72032904298101*^9}, {
+  3.720329074632736*^9, 3.7203290973035088`*^9}, {3.720329800875875*^9, 
+  3.720329830620719*^9}, {3.7203301960323353`*^9, 3.720330214887784*^9}, {
+  3.7203305468793573`*^9, 3.720330559992943*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["n",
+   FontWeight->"Bold"], 
+  StyleBox["=",
+   FontWeight->"Bold"], 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        SubscriptBox["u", 
+         RowBox[{",", "r"}]]}], ")"}], 
+      SubscriptBox[
+       StyleBox["e",
+        FontWeight->"Bold"], "z"]}], "-", 
+     RowBox[{
+      SubscriptBox["w", 
+       RowBox[{",", "r"}]], 
+      StyleBox[
+       SubscriptBox[
+        StyleBox["e",
+         FontWeight->"Bold"], 
+        StyleBox["r",
+         FontWeight->"Plain"]],
+       FontWeight->"Bold"]}]}], 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         SubscriptBox["u", 
+          RowBox[{",", "r"}]]}], ")"}], "2"], "+", 
+      SuperscriptBox[
+       SubscriptBox["w", 
+        RowBox[{",", "r"}]], "2"]}]]], "=", " ", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["n", "r"], 
+     SubscriptBox[
+      StyleBox["e",
+       FontWeight->"Bold"], "r"]}], "+", 
+    RowBox[{
+     SubscriptBox["n", "z"], 
+     RowBox[{
+      SubscriptBox[
+       StyleBox["e",
+        FontWeight->"Bold"], "z"], "."}]}]}]}]}]], "DisplayFormula",
+ CellChangeTimes->{{3.72032910647677*^9, 3.720329241440157*^9}, {
+   3.720329275247034*^9, 3.720329277267277*^9}, {3.720329315500722*^9, 
+   3.7203293156207113`*^9}, {3.7203297486630497`*^9, 
+   3.7203297541166267`*^9}, {3.720329795182281*^9, 3.720329796044648*^9}, {
+   3.720329946015087*^9, 3.7203300499987164`*^9}, {3.7203302756297417`*^9, 
+   3.720330367962619*^9}, 3.720330617231103*^9, {3.720330713017313*^9, 
+   3.720330763722406*^9}, 3.720767486519543*^9, {3.720773676507193*^9, 
+   3.7207737627166195`*^9}, {3.720795291114411*^9, 3.720795297551781*^9}},
+ FontSize->18],
+
+Cell[CellGroupData[{
+
+Cell["Strain and Stress Derivation", "Section",
+ CellChangeTimes->{{3.7207711673334837`*^9, 3.720771173147253*^9}, {
+  3.720795389004861*^9, 3.720795392201185*^9}}],
+
+Cell["\<\
+The Green-Lagrange strain tensor can be expressed in terms of the metric \
+tensor:\
+\>", "Text",
+ CellChangeTimes->{{3.720771419455133*^9, 3.7207714591813064`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["E", "\[Alpha]\[Beta]"], "="}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ Cell[BoxData[
+  RowBox[{
+   FractionBox["1", "2"], 
+   RowBox[{"(", 
+    RowBox[{
+     SubscriptBox["g", "\[Alpha]\[Beta]"], "-", 
+     SubscriptBox["\[Delta]", "\[Alpha]\[Beta]"]}], ")"}]}]],
+  CellChangeTimes->{{3.72032910647677*^9, 3.720329241440157*^9}, {
+   3.720329275247034*^9, 3.720329277267277*^9}, {3.720329315500722*^9, 
+   3.7203293156207113`*^9}, {3.7203297486630497`*^9, 
+   3.7203297541166267`*^9}, {3.720329795182281*^9, 3.720329796044648*^9}, {
+   3.720329946015087*^9, 3.7203300499987164`*^9}, {3.7203302756297417`*^9, 
+   3.720330367962619*^9}, {3.720771096261094*^9, 3.720771108277672*^9}, {
+   3.720771244367815*^9, 3.7207713269077053`*^9}}]
+}], "Text",
+ CellChangeTimes->{{3.720771467440858*^9, 3.7207716261204777`*^9}}],
+
+Cell["From which we obtain", "Text",
+ CellChangeTimes->{{3.7207717290990353`*^9, 3.720771742221736*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ RowBox[{
+  RowBox[{"[", 
+   SubscriptBox["E", "\[Alpha]\[Beta]"], "]"}], "=", 
+  RowBox[{"(", GridBox[{
+     {
+      RowBox[{
+       SubscriptBox["u", 
+        RowBox[{",", "r"}]], "+", 
+       RowBox[{
+        FractionBox["1", "2"], 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           SubscriptBox["u", 
+            RowBox[{",", "r"}]], "2"], "+", 
+          SuperscriptBox[
+           SubscriptBox["w", 
+            RowBox[{",", "r"}]], "2"]}], ")"}]}]}], "0"},
+     {"0", 
+      RowBox[{
+       FractionBox["u", "r"], "+", 
+       FractionBox[
+        SuperscriptBox["u", "2"], 
+        RowBox[{"2", 
+         SuperscriptBox["r", "2"]}]]}]}
+    }], ")"}]}]],
+ CellChangeTimes->{{3.72032910647677*^9, 3.720329241440157*^9}, {
+  3.720329275247034*^9, 3.720329277267277*^9}, {3.720329315500722*^9, 
+  3.7203293156207113`*^9}, {3.7203297486630497`*^9, 3.7203297541166267`*^9}, {
+  3.720329795182281*^9, 3.720329796044648*^9}, {3.720329946015087*^9, 
+  3.7203300499987164`*^9}, {3.7207711150620756`*^9, 
+  3.720771116003194*^9}}]], "Text",
+ CellChangeTimes->{{3.7207717524671907`*^9, 3.7207717601156087`*^9}, {
+  3.7207718020522833`*^9, 3.7207720056360035`*^9}, {3.7207953102652864`*^9, 
+  3.720795320803215*^9}},
+ FontSize->18],
+
+Cell["\<\
+The stress tensor is found by the constitutive law, this is not explicitly \
+found in terms of displacements, but will be found in octave\
+\>", "Text",
+ CellChangeTimes->{{3.720795410666246*^9, 3.720795447611409*^9}, {
+  3.720795490112689*^9, 3.7207955150941286`*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["\[Sigma]", "\[Alpha]\[Beta]"], "=", 
+   RowBox[{
+    FractionBox["E", 
+     RowBox[{"1", "-", 
+      SuperscriptBox["\[Nu]", "2"]}]], " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["\[Nu]E", "\[Gamma]\[Gamma]"], 
+        SubscriptBox["\[Delta]", "\[Alpha]\[Beta]"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", "\[Nu]"}], ")"}], 
+        SubscriptBox["E", "\[Alpha]\[Beta]"]}]}], ")"}], "."}]}]}], 
+  TraditionalForm]]]], "Text",
+ CellChangeTimes->{{3.720795581172391*^9, 3.720795637136875*^9}},
+ FontSize->18],
+
+Cell["\<\
+Due to the axisymmetric strain being purely diagonal, so is the axisymmetric \
+stress, this fact is used to simplify the full equations later on.\
+\>", "Text",
+ CellChangeTimes->{{3.720795770796421*^9, 3.720795841150606*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Christoffel Symbols", "Section",
+ CellChangeTimes->{{3.7207720476370935`*^9, 3.7207720614008856`*^9}}],
+
+Cell[TextData[{
+ "The Christoffel symbol of the second kind, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[CapitalGamma]", "\[Alpha]\[Beta]\[Gamma]"], ",", 
+    RowBox[{
+     RowBox[{
+     "can", " ", "be", " ", "expressed", " ", "in", " ", "terms", " ", "of", 
+      " ", "derivatives", " ", "of", " ", "the", " ", "Green"}], "-", 
+     RowBox[{"Lagrange", " ", "strain", " ", "tensor"}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"]
+}], "Text",
+ CellChangeTimes->{{3.7207720814458838`*^9, 3.720772126794347*^9}, {
+  3.7207721569728622`*^9, 3.720772246348694*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["\[CapitalGamma]", "\[Alpha]\[Beta]\[Gamma]"], "=", 
+   RowBox[{
+    SubscriptBox["E", 
+     RowBox[{"\[Alpha]\[Beta]", ",", "\[Gamma]"}]], "+", 
+    SubscriptBox["E", 
+     RowBox[{"\[Gamma]\[Alpha]", ",", "\[Beta]"}]], "-", 
+    SubscriptBox["E", 
+     RowBox[{"\[Beta]\[Gamma]", ",", "\[Alpha]"}]]}]}], TraditionalForm]],
+ FormatType->"TraditionalForm"]], "Text",
+ CellChangeTimes->{{3.720772268411125*^9, 3.720772319159343*^9}}],
+
+Cell["and we obtain:", "Text",
+ CellChangeTimes->{{3.7207730312662544`*^9, 3.72077303435719*^9}, 
+   3.7207731378817067`*^9}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["\[CapitalGamma]", "rr\[Theta]"], "=", 
+    RowBox[{
+     SubscriptBox["\[CapitalGamma]", "\[Theta]rr"], "=", 
+     RowBox[{
+      SubscriptBox["\[CapitalGamma]", "r\[Theta]r"], "=", 
+      RowBox[{
+       SubscriptBox["\[CapitalGamma]", "\[Theta]\[Theta]\[Theta]"], "=", 
+       "0"}]}]}]}], ","}], TraditionalForm]],
+ FormatType->"TraditionalForm"]], "Text",
+ CellChangeTimes->{{3.7207730585404034`*^9, 3.7207731270013204`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[CapitalGamma]", "rrr"], "=", 
+    RowBox[{
+     SubscriptBox["u", 
+      RowBox[{",", "rr"}]], "+", 
+     RowBox[{
+      SubscriptBox["u", 
+       RowBox[{",", "r"}]], 
+      SubscriptBox["u", 
+       RowBox[{",", "rr"}]]}], "+", 
+     RowBox[{
+      SubscriptBox["w", 
+       RowBox[{",", "r"}]], 
+      SubscriptBox["w", 
+       RowBox[{",", "rr"}]]}]}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ","
+}], "Text",
+ CellChangeTimes->{{3.720773152639434*^9, 3.7207732376971264`*^9}, {
+  3.7207953311269636`*^9, 3.7207953358973885`*^9}},
+ FontSize->18],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[CapitalGamma]", "\[Theta]\[Theta]r"], "=", 
+    RowBox[{
+     SubscriptBox["\[CapitalGamma]", "\[Theta]r\[Theta]"], "=", 
+     RowBox[{
+      RowBox[{"-", 
+       SubscriptBox["\[CapitalGamma]", "r\[Theta]\[Theta]"]}], "="}]}]}], 
+   TraditionalForm]]],
+ Cell[BoxData[
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "r"], 
+    SubscriptBox["u", 
+     RowBox[{",", "r"}]]}], "+", 
+   RowBox[{
+    FractionBox["1", 
+     SuperscriptBox["r", "2"]], 
+    RowBox[{"(", 
+     RowBox[{"u", "+", 
+      SubscriptBox["uu", 
+       RowBox[{",", "r"}]]}], ")"}]}], "-", 
+   RowBox[{
+    FractionBox["1", 
+     SuperscriptBox["r", "3"]], 
+    RowBox[{
+     SuperscriptBox["u", "2"], "."}]}]}]],
+  CellChangeTimes->{{3.72032910647677*^9, 3.720329241440157*^9}, {
+   3.720329275247034*^9, 3.720329277267277*^9}, {3.720329315500722*^9, 
+   3.7203293156207113`*^9}, {3.7203297486630497`*^9, 
+   3.7203297541166267`*^9}, {3.720329795182281*^9, 3.720329796044648*^9}, {
+   3.720329946015087*^9, 3.7203300499987164`*^9}, {3.7207711150620756`*^9, 
+   3.720771116003194*^9}}]
+}], "Text",
+ CellChangeTimes->{{3.7207732557100077`*^9, 3.720773405010092*^9}, {
+  3.720795343347818*^9, 3.720795354788529*^9}},
+ FontSize->72]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Curvature Tensor and Bending Moments", "Section",
+ CellChangeTimes->{{3.7207737799598684`*^9, 3.7207737894455996`*^9}, {
+   3.720774650323674*^9, 3.7207746611495214`*^9}, 3.720775687899476*^9, {
+   3.7207944885786533`*^9, 3.7207944966488266`*^9}}],
+
+Cell["\<\
+The curvature tensor can be derived can be obtained from the following \
+relation\
+\>", "Text",
+ CellChangeTimes->{{3.720773826127318*^9, 3.720773837286294*^9}, {
+  3.720773880988618*^9, 3.7207738938498087`*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["b", "\[Alpha]\[Beta]"], "=", 
+   RowBox[{
+    SubscriptBox["u", 
+     RowBox[{"i", ",", "\[Alpha]\[Beta]"}]], 
+    SubscriptBox["n", "i"]}]}], TraditionalForm]]]], "Text",
+ CellChangeTimes->{{3.720773907009674*^9, 3.7207739763847413`*^9}, {
+  3.72077415240755*^9, 3.720774179907338*^9}, {3.720774224232971*^9, 
+  3.7207742244629984`*^9}}],
+
+Cell["and in the axisymmetric geometry we obtain,", "Text",
+ CellChangeTimes->{{3.7207742359400187`*^9, 3.720774250248888*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ RowBox[{
+  RowBox[{"[", 
+   SubscriptBox["b", "\[Alpha]\[Beta]"], "]"}], "=", 
+  RowBox[{"(", GridBox[{
+     {
+      RowBox[{
+       RowBox[{
+        SubscriptBox["u", 
+         RowBox[{",", "rr"}]], 
+        SubscriptBox["n", "r"]}], "+", 
+       RowBox[{
+        SubscriptBox["w", 
+         RowBox[{",", "rr"}]], 
+        SubscriptBox["n", "z"]}]}], "0"},
+     {"0", "0"}
+    }], ")"}]}]],
+ CellChangeTimes->{{3.72032910647677*^9, 3.720329241440157*^9}, {
+  3.720329275247034*^9, 3.720329277267277*^9}, {3.720329315500722*^9, 
+  3.7203293156207113`*^9}, {3.7203297486630497`*^9, 3.7203297541166267`*^9}, {
+  3.720329795182281*^9, 3.720329796044648*^9}, {3.720329946015087*^9, 
+  3.7203300499987164`*^9}, {3.7207711150620756`*^9, 
+  3.720771116003194*^9}}]], "Text",
+ CellChangeTimes->{{3.720774267961797*^9, 3.72077433553778*^9}},
+ FontSize->18],
+
+Cell["\<\
+The three bending moments can be found from the curvature tensor in a similar \
+way to how the stress was found from the strain tensor. This will not be \
+calculated explicitly in terms of displacements by hand, but will be found by \
+the constitutive law in octave\
+\>", "Text",
+ CellChangeTimes->{{3.720794506641018*^9, 3.720794598234042*^9}, {
+  3.720795067144161*^9, 3.7207951012564883`*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["M", "i\[Alpha]\[Beta]"], "=", 
+   RowBox[{
+    FractionBox[
+     SuperscriptBox["h", "3"], "12"], 
+    SubscriptBox["n", "i"], 
+    FractionBox["E", 
+     RowBox[{"1", "-", 
+      SuperscriptBox["\[Nu]", "2"]}]], " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        SubscriptBox["\[Nu]b", "\[Gamma]\[Gamma]"], 
+        SubscriptBox["\[Delta]", "\[Alpha]\[Beta]"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"1", "-", "\[Nu]"}], ")"}], 
+        SubscriptBox["b", "\[Alpha]\[Beta]"]}]}], ")"}], "."}]}]}], 
+  TraditionalForm]]]], "Text",
+ CellChangeTimes->{{3.7207946087956533`*^9, 3.7207948406833787`*^9}},
+ FontSize->18],
+
+Cell[TextData[{
+ "It is worth noting that ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["M", "\[Theta]\[Alpha]\[Beta]"], "=", 
+    RowBox[{"0", "=", 
+     RowBox[{
+      SubscriptBox["M", "i\[Theta]r"], "=", 
+      SubscriptBox["M", "ir\[Theta]"]}]}]}], TraditionalForm]]],
+ " for the axisymmetric case, this makes derivations involving the bending \
+moments significantly more simple moving forward."
+}], "Text",
+ CellChangeTimes->{{3.7207948479727993`*^9, 3.720794853085097*^9}, {
+  3.7207949018779016`*^9, 3.7207950268338423`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Total Stress and Tension derivation", "Section",
+ CellChangeTimes->{{3.720795906560026*^9, 3.720795917411183*^9}}],
+
+Cell["\<\
+The total stress tensor is found using the following relation:\
+\>", "Text",
+ CellChangeTimes->{{3.7207959308079553`*^9, 3.720795958035522*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["N", "i\[Gamma]"], "=", " ", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["h\[Sigma]", "\[Alpha]\[Gamma]"], 
+      SubscriptBox["r", 
+       RowBox[{"i", ",", "\[Alpha]"}]]}], "-", " ", 
+     RowBox[{
+      SubscriptBox["M", "i\[Alpha]\[Beta]"], 
+      SubscriptBox["\[CapitalGamma]", "\[Gamma]\[Alpha]\[Beta]"]}]}]}], 
+   TraditionalForm]]],
+ ","
+}], "Text",
+ CellChangeTimes->{{3.720796045871831*^9, 3.720796059109414*^9}, {
+  3.7207961717202992`*^9, 3.720796228575569*^9}, {3.720796289945101*^9, 
+  3.720796295853442*^9}}],
+
+Cell["\<\
+which was found by hand, making simplifications suggested above for the \
+axisymmetric case,\
+\>", "Text",
+ CellChangeTimes->{{3.7207963029828515`*^9, 3.72079634936152*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["N", "rr"], "=", " ", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["h\[Sigma]", "rr"], "(", 
+      RowBox[{"1", "+", 
+       FractionBox[
+        RowBox[{"\[PartialD]", "u"}], 
+        RowBox[{"\[PartialD]", "r"}]]}], ")"}], "-", 
+     RowBox[{
+      SubscriptBox["M", "rrr"], 
+      SubscriptBox["\[CapitalGamma]", "rrr"]}], "-", 
+     RowBox[{
+      SubscriptBox["M", "r\[Theta]\[Theta]"], 
+      SubscriptBox["\[CapitalGamma]", "r\[Theta]\[Theta]"]}]}]}], 
+   TraditionalForm]]],
+ ","
+}], "Text",
+ CellChangeTimes->{{3.720796359738117*^9, 3.720796415280311*^9}, {
+  3.7207964809530897`*^9, 3.720796601435787*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["N", "r\[Theta]"], "=", " ", "0"}], TraditionalForm]]],
+ ","
+}], "Text",
+ CellChangeTimes->{{3.720796606834099*^9, 3.720796623677514*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["N", "\[Theta]r"], "=", " ", "0"}], ","}], 
+  TraditionalForm]]]], "Text",
+ CellChangeTimes->{{3.7207966284407873`*^9, 3.720796641365531*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["N", "\[Theta]\[Theta]"], "=", " ", 
+    RowBox[{
+     SubscriptBox["h\[Sigma]", "\[Theta]\[Theta]"], "(", 
+     RowBox[{"1", "+", 
+      FractionBox["u", "r"]}], ")"}]}], ","}], TraditionalForm]]]], "Text",
+ CellChangeTimes->{{3.7207966486329494`*^9, 3.720796694333579*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["N", "zr"], "=", " ", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["h\[Sigma]", "rr"], 
+      FractionBox[
+       RowBox[{"\[PartialD]", "w"}], 
+       RowBox[{"\[PartialD]", "r"}]]}], "-", 
+     RowBox[{
+      SubscriptBox["M", "zrr"], 
+      SubscriptBox["\[CapitalGamma]", "rrr"]}], "-", 
+     RowBox[{
+      SubscriptBox["M", "z\[Theta]\[Theta]"], 
+      SubscriptBox["\[CapitalGamma]", "r\[Theta]\[Theta]"]}]}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    SubscriptBox["N", "z\[Theta]"], "=", " ", "0"}]}], 
+  TraditionalForm]]]], "Text",
+ CellChangeTimes->{{3.7207967027083983`*^9, 3.7207967877952905`*^9}}],
+
+Cell["The tension can be found by,", "Text",
+ CellChangeTimes->{{3.720796836178076*^9, 3.720796865356499*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["T", "i\[Alpha]"], "=", " ", 
+    RowBox[{
+     SubscriptBox["N", "i\[Alpha]"], " ", "-", " ", 
+     SubscriptBox["M", 
+      RowBox[{"i\[Alpha]\[Beta]", ",", "\[Beta]"}]]}]}], TraditionalForm]]],
+ ", giving:"
+}], "Text",
+ CellChangeTimes->{{3.7207968906169395`*^9, 3.720796943733494*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["T", "rr"], "=", " ", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["h\[Sigma]", "rr"], "(", 
+      RowBox[{"1", "+", 
+       FractionBox[
+        RowBox[{"\[PartialD]", "u"}], 
+        RowBox[{"\[PartialD]", "r"}]]}], ")"}], "-", 
+     RowBox[{
+      SubscriptBox["M", "rrr"], 
+      SubscriptBox["\[CapitalGamma]", "rrr"]}], "-", 
+     RowBox[{
+      SubscriptBox["M", "r\[Theta]\[Theta]"], 
+      SubscriptBox["\[CapitalGamma]", "r\[Theta]\[Theta]"]}], "-", 
+     FractionBox[
+      RowBox[{"\[PartialD]", 
+       SubscriptBox["M", "rrr"]}], 
+      RowBox[{"\[PartialD]", "r"}]]}]}], TraditionalForm]]],
+ ",\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["T", "r\[Theta]"], "=", " ", "0"}], TraditionalForm]]],
+ ",\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["T", "\[Theta]r"], "=", " ", "0"}], ","}], 
+   TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["T", "\[Theta]\[Theta]"], "=", " ", 
+     RowBox[{
+      SubscriptBox["h\[Sigma]", "\[Theta]\[Theta]"], "(", 
+      RowBox[{"1", "+", 
+       FractionBox["u", "r"]}], ")"}]}], ","}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["T", "zr"], "=", " ", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["h\[Sigma]", "rr"], 
+       FractionBox[
+        RowBox[{"\[PartialD]", "w"}], 
+        RowBox[{"\[PartialD]", "r"}]]}], "-", 
+      RowBox[{
+       SubscriptBox["M", "zrr"], 
+       SubscriptBox["\[CapitalGamma]", "rrr"]}], "-", 
+      RowBox[{
+       SubscriptBox["M", "z\[Theta]\[Theta]"], 
+       SubscriptBox["\[CapitalGamma]", "r\[Theta]\[Theta]"]}], "-", 
+      FractionBox[
+       RowBox[{"\[PartialD]", 
+        SubscriptBox["M", "zrr"]}], 
+       RowBox[{"\[PartialD]", "r"}]]}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     SubscriptBox["T", "z\[Theta]"], "=", " ", "0."}]}], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.7207969521429744`*^9, 3.720797083989213*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Full Equations", "Section",
+ CellChangeTimes->{{3.7207971349541435`*^9, 3.720797141368893*^9}}],
+
+Cell["\<\
+The full equations are found by taking the divergence of the tension tensor:\
+\>", "Text",
+ CellChangeTimes->{{3.7207971533845825`*^9, 3.7207971972428355`*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["T", 
+    RowBox[{"i\[Beta]", ",", "\[Beta]"}]], "=", " ", 
+   SubscriptBox["\[Alpha]\[CapitalDelta]pn", "i"]}], 
+  TraditionalForm]]]], "Text",
+ CellChangeTimes->{{3.7207972081914663`*^9, 3.72079723396795*^9}}],
+
+Cell[TextData[{
+ "where \[Alpha] = ",
+ Cell[BoxData[
+  FormBox[
+   SqrtBox[
+    RowBox[{"g", "/", "G"}]], TraditionalForm]]],
+ ", and G is the determinant of the metric tensor in the deformed state, \
+unity in this case, so ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Alpha]n", "i"], " ", "=", " ", 
+    SubscriptBox[
+     RowBox[{
+      FractionBox[
+       SqrtBox["g"], 
+       SqrtBox["g"]], "[", 
+      RowBox[{
+       SubscriptBox[
+        StyleBox["g",
+         FontWeight->"Bold"], "r"], "\[Times]", 
+       SubscriptBox[
+        StyleBox["g",
+         FontWeight->"Bold"], "\[Theta]"]}], "]"}], "i"]}], TraditionalForm]]],
+ ". In the axisymmetric case, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["T", 
+     RowBox[{"i\[Theta]", ",", "\[Theta]"}]], "=", " ", "0"}], 
+   TraditionalForm]]],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"since", " ", 
+     SubscriptBox["T", "\[Theta]r"]}], "=", " ", "0"}], TraditionalForm]]],
+ ", the i=\[Theta] equation vanishes, leaving only the following two:"
+}], "Text",
+ CellChangeTimes->{{3.720797341758328*^9, 3.7207975247258253`*^9}, {
+  3.7207976076443706`*^9, 3.720797639550209*^9}, {3.720797670339979*^9, 
+  3.7207977879931707`*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["T", 
+     RowBox[{"rr", ",", "r"}]], "=", " ", 
+    SubscriptBox["\[Alpha]\[CapitalDelta]pn", "r"]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    SubscriptBox["T", 
+     RowBox[{"zr", ",", "r"}]], "=", " ", 
+    SubscriptBox["\[Alpha]\[CapitalDelta]pn", "z"]}]}], 
+  TraditionalForm]]]], "Text",
+ CellChangeTimes->{
+  3.7207978035910673`*^9, {3.7207978392791185`*^9, 3.720797886187281*^9}}],
+
+Cell["Which are found to be:", "Text",
+ CellChangeTimes->{{3.720797906166429*^9, 3.720797912526794*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"h", 
+      FractionBox[
+       RowBox[{"\[PartialD]", 
+        SubscriptBox["\[Sigma]", "rr"]}], 
+       RowBox[{"\[PartialD]", "r"}]]}], "+", 
+     RowBox[{"h", 
+      FractionBox[
+       RowBox[{"\[PartialD]", 
+        SubscriptBox["\[Sigma]", "rr"]}], 
+       RowBox[{"\[PartialD]", "r"}]], 
+      FractionBox[
+       RowBox[{"\[PartialD]", "u"}], 
+       RowBox[{"\[PartialD]", "r"}]]}], "+", 
+     RowBox[{
+      SubscriptBox["h\[Sigma]", "rr"], 
+      FractionBox[
+       RowBox[{
+        SuperscriptBox["\[PartialD]", "2"], "u"}], 
+       RowBox[{"\[PartialD]", 
+        SuperscriptBox["r", "2"]}]]}], "-", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", 
+        SubscriptBox["M", "rrr"]}], 
+       RowBox[{"\[PartialD]", "r"}]], 
+      SubscriptBox["\[CapitalGamma]", "rrr"]}], "-", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", 
+        SubscriptBox["\[CapitalGamma]", "rrr"]}], 
+       RowBox[{"\[PartialD]", "r"}]], 
+      SubscriptBox["M", "rrr"]}], "-", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[PartialD]", 
+        SubscriptBox["M", "r\[Theta]\[Theta]"]}], 
+       RowBox[{"\[PartialD]", "r"}]], 
+      SubscriptBox["\[CapitalGamma]", "r\[Theta]\[Theta]"]}], "-", 
+     RowBox[{
+      SubscriptBox["M", "r\[Theta]\[Theta]"], 
+      FractionBox[
+       RowBox[{"\[PartialD]", 
+        SubscriptBox["\[CapitalGamma]", "r\[Theta]\[Theta]"]}], 
+       RowBox[{"\[PartialD]", "r"}]]}], "-", 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[PartialD]", "2"], 
+       SubscriptBox["M", "rrr"]}], 
+      RowBox[{"\[PartialD]", 
+       SuperscriptBox["r", "2"]}]]}], "=", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"\[PartialD]", "w"}], 
+       RowBox[{"\[PartialD]", "r"}]]}], "\[CapitalDelta]p"}]}], 
+   TraditionalForm]]],
+ ","
+}], "Text",
+ CellChangeTimes->{{3.7207979420034904`*^9, 3.720798119874696*^9}, {
+   3.720798154164668*^9, 3.7207982492918262`*^9}, 3.720798403656152*^9},
+ FontSize->24],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"h", 
+     FractionBox[
+      RowBox[{"\[PartialD]", 
+       SubscriptBox["\[Sigma]", "rr"]}], 
+      RowBox[{"\[PartialD]", "r"}]], 
+     FractionBox[
+      RowBox[{"\[PartialD]", "w"}], 
+      RowBox[{"\[PartialD]", "r"}]]}], "+", 
+    RowBox[{
+     SubscriptBox["h\[Sigma]", "rr"], 
+     FractionBox[
+      RowBox[{
+       SuperscriptBox["\[PartialD]", "2"], "w"}], 
+      RowBox[{"\[PartialD]", 
+       SuperscriptBox["r", "2"]}]]}], "-", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", 
+       SubscriptBox["M", "zrr"]}], 
+      RowBox[{"\[PartialD]", "r"}]], 
+     SubscriptBox["\[CapitalGamma]", "rrr"]}], "-", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", 
+       SubscriptBox["\[CapitalGamma]", "rrr"]}], 
+      RowBox[{"\[PartialD]", "r"}]], 
+     SubscriptBox["M", "zrr"]}], "-", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[PartialD]", 
+       SubscriptBox["M", "z\[Theta]\[Theta]"]}], 
+      RowBox[{"\[PartialD]", "r"}]], 
+     SubscriptBox["\[CapitalGamma]", "r\[Theta]\[Theta]"]}], "-", 
+    RowBox[{
+     SubscriptBox["M", "z\[Theta]\[Theta]"], 
+     FractionBox[
+      RowBox[{"\[PartialD]", 
+       SubscriptBox["\[CapitalGamma]", "r\[Theta]\[Theta]"]}], 
+      RowBox[{"\[PartialD]", "r"}]]}], "-", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[PartialD]", "2"], 
+      SubscriptBox["M", "zrr"]}], 
+     RowBox[{"\[PartialD]", 
+      SuperscriptBox["r", "2"]}]]}], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      FractionBox[
+       RowBox[{"\[PartialD]", "u"}], 
+       RowBox[{"\[PartialD]", "r"}]]}], ")"}], "\[CapitalDelta]p"}]}], 
+  TraditionalForm]]]], "Text",
+ CellChangeTimes->{
+  3.7207983741814537`*^9, {3.720798466322756*^9, 3.720798523671053*^9}},
+ FontSize->24],
+
+Cell["\<\
+These equations are still using quantities that have dimensions, they still \
+need to be change to non-dimensional quantities. Also the boundary conditions \
+need to be found.\
+\>", "Text",
+ CellChangeTimes->{{3.7207987293944635`*^9, 3.7207987790563216`*^9}, {
+  3.7207992987252054`*^9, 3.720799326559225*^9}}]
+}, Open  ]],
+
+Cell["Moving to non-dimensional variables", "Section",
+ CellChangeTimes->{{3.7207993362327843`*^9, 3.720799360230164*^9}}],
+
+Cell["Boundary Condtitions", "Section",
+ CellChangeTimes->{{3.720799368329629*^9, 3.72079937614408*^9}}]
+}, Open  ]]
+},
+WindowSize->{1362, 676},
+WindowMargins->{{Automatic, -5}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 267, 6, 124, "Title"],
+Cell[850, 30, 212, 5, 68, "Text"],
+Cell[1065, 37, 2101, 69, 60, "Text"],
+Cell[3169, 108, 230, 3, 30, "Text"],
+Cell[3402, 113, 1176, 39, 49, "DisplayFormula"],
+Cell[4581, 154, 389, 13, 30, "Text"],
+Cell[4973, 169, 222, 3, 30, "Text"],
+Cell[5198, 174, 972, 26, 50, "DisplayFormula"],
+Cell[6173, 202, 108, 1, 30, "Text"],
+Cell[6284, 205, 884, 23, 47, "DisplayFormula"],
+Cell[7171, 230, 282, 3, 30, "Text"],
+Cell[7456, 235, 1204, 36, 54, "DisplayFormula"],
+Cell[8663, 273, 301, 4, 30, "Text"],
+Cell[8967, 279, 1757, 57, 63, "DisplayFormula"],
+Cell[CellGroupData[{
+Cell[10749, 340, 164, 2, 63, "Section"],
+Cell[10916, 344, 174, 4, 30, "Text"],
+Cell[11093, 350, 899, 21, 37, "Text"],
+Cell[11995, 373, 104, 1, 30, "Text"],
+Cell[12102, 376, 1281, 36, 76, "Text"],
+Cell[13386, 414, 278, 5, 30, "Text"],
+Cell[13667, 421, 647, 20, 46, "Text"],
+Cell[14317, 443, 235, 4, 30, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14589, 452, 108, 1, 63, "Section"],
+Cell[14700, 455, 591, 14, 33, "Text"],
+Cell[15294, 471, 497, 12, 33, "Text"],
+Cell[15794, 485, 125, 2, 30, "Text"],
+Cell[15922, 489, 508, 13, 30, "Text"],
+Cell[16433, 504, 638, 23, 38, "Text"],
+Cell[17074, 529, 1269, 38, 212, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18380, 572, 253, 3, 63, "Section"],
+Cell[18636, 577, 222, 5, 30, "Text"],
+Cell[18861, 584, 404, 10, 33, "Text"],
+Cell[19268, 596, 127, 1, 30, "Text"],
+Cell[19398, 599, 876, 24, 58, "Text"],
+Cell[20277, 625, 406, 7, 49, "Text"],
+Cell[20686, 634, 730, 23, 49, "Text"],
+Cell[21419, 659, 546, 14, 33, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22002, 678, 120, 1, 63, "Section"],
+Cell[22125, 681, 154, 3, 30, "Text"],
+Cell[22282, 686, 598, 18, 33, "Text"],
+Cell[22883, 706, 183, 4, 30, "Text"],
+Cell[23069, 712, 689, 22, 43, "Text"],
+Cell[23761, 736, 209, 7, 30, "Text"],
+Cell[23973, 745, 220, 6, 30, "Text"],
+Cell[24196, 753, 353, 9, 37, "Text"],
+Cell[24552, 764, 700, 21, 62, "Text"],
+Cell[25255, 787, 110, 1, 30, "Text"],
+Cell[25368, 790, 360, 11, 33, "Text"],
+Cell[25731, 803, 2058, 69, 151, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27826, 877, 101, 1, 63, "Section"],
+Cell[27930, 880, 170, 3, 30, "Text"],
+Cell[28103, 885, 276, 7, 33, "Text"],
+Cell[28382, 894, 1232, 41, 69, "Text"],
+Cell[29617, 937, 474, 14, 54, "Text"],
+Cell[30094, 953, 104, 1, 30, "Text"],
+Cell[30201, 956, 2065, 65, 61, "Text"],
+Cell[32269, 1023, 1827, 58, 61, "Text"],
+Cell[34099, 1083, 320, 6, 30, "Text"]
+}, Open  ]],
+Cell[34434, 1092, 122, 1, 63, "Section"],
+Cell[34559, 1095, 104, 1, 49, "Section"]
+}, Open  ]]
+}
+]
+*)
+
