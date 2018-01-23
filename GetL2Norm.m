@@ -11,3 +11,4 @@ function [norm,norm2] =GetL2Norm(soln,exact)
   norm2=quad(@(x)(exact(x)-w_inter(x)).^2,0,1);
   norm=sqrt(norm2);
 endfunction
+
